@@ -15,13 +15,12 @@ export const getHealthLogById = async (id) => {
     return response.data;
 }
 
-export const editHealthLog = async (id) => {
-    const response =  await api.put(`HealthLog/${id}`)
-    return response.data;
+export const editHealthLog = async (id, healthLog) => {
+    await api.put(`HealthLog/${id}`, healthLog );
 }
 
 export const deleteHealthLog = async (id) => {
-    const responte = await api.delete(`HealthLog/${id}`)
+    await api.delete(`HealthLog/${id}`);
  }
 
 
