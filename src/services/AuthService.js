@@ -1,7 +1,7 @@
 import api from "./api"
 
-export async function registerUser(user) {
-    await api.post("register", user);
+export async function registerUser(email, password) {
+    await api.post("register", { email, password });
 }
 
 export async function loginWithCookie(email, password) {
