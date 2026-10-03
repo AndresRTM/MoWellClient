@@ -15,7 +15,7 @@ export default function Login() {
 
         try {
             await loginWithCookie(email, password);
-            navigate("/");
+            navigate("/create");
         } catch {
             setError("Wrong email or password");
         }
