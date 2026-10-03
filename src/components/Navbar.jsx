@@ -5,9 +5,9 @@ export default function Navbar() {
         <header>
             <nav>
                 <ul>
-                    <li><NavLink to="/Dashboard" end>Overview</NavLink></li>
-                    <li><NavLink to="/Create">Create log</NavLink></li>
-                    <li><NavLink to="/Logout">Logout</NavLink></li>           
+                    <li><NavLink to="/overview" end>Overview</NavLink></li>
+                    <li><NavLink to="/create" end>Create log</NavLink></li>
+                    <li><NavLink to="/logout" end>Logout</NavLink></li>           
                 </ul>
             </nav>
         </header>
