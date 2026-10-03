@@ -4,6 +4,7 @@ import RegisterPage from './pages/Register'
 import HomePage from './pages/Home'
 import CreateLogPage from './pages/Createlog'
 import './App.css'
+import Layout from './components/Layout'; 
 
 function App() { 
 
@@ -11,8 +12,10 @@ function App() {
     <Routes>
       <Route path="/" element={<LoginPage />} />
       <Route path="/home" element={<HomePage />} />
-      <Route path="/register" element={<RegisterPage />} />
-      <Route path="/create" element={<CreateLogPage />} />
+      <Route element = {<Layout/>}>
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/create" element={<CreateLogPage />} />
+      </Route>
     </Routes>
   )
 }
