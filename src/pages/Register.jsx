@@ -15,9 +15,8 @@ export default function Register() {
         setError("");
 
         try {
-            await registerUser(email, password);
-            await loginWithCookie(email, password);
-            navigate("/");
+            await registerUser(email, password);           
+            navigate("/create");
         } catch (err) {
             const errors = err.response?.data?.errors;
 
@@ -55,7 +54,7 @@ export default function Register() {
                 {error && <p style={{ color: "red" }}>{error}</p>}
                 <button type="submit">Register</button>
             </form>
-            <Link to="/login">Already have an account? Log in</Link>
+            <Link to="/">Already have an account? Log in</Link>
         </div>
     );
 }
